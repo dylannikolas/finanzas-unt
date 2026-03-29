@@ -8,6 +8,7 @@ import Registro      from './screens/Registro'
 import NuevaOperacion from './screens/NuevaOperacion'
 import Deudas        from './screens/Deudas'
 import Analisis      from './screens/Analisis'
+import Ajustes        from './screens/Ajustes'
 
 function AppShell({ children }) {
   return (
@@ -31,7 +32,7 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center bg-gray-50">
+      <div className="h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
         <div className="w-6 h-6 border-2 border-brand-500 border-t-transparent rounded-full animate-spin" />
       </div>
     )
@@ -66,6 +67,10 @@ export default function App() {
           <PrivateRoute>
             <AppShell><Analisis /></AppShell>
           </PrivateRoute>
+        } />
+
+        <Route path="/ajustes" element={
+           <PrivateRoute><AppShell><Ajustes /></AppShell></PrivateRoute>
         } />
 
         <Route path="*" element={<Navigate to="/" replace />} />
