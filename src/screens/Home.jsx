@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
-import { MetricCard, Spinner } from '../components/ui/index.js'
+import { MetricCard, Spinner } from '../components/ui/index.jsx'
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 
 const METODO_ICO = { efectivo: '💵', yape: '📱', tarjeta: '💳' }

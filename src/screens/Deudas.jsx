@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useStore } from '../store/useStore'
-import { Empty, Spinner, Badge } from '../components/ui/index.js'
+import { Empty, Spinner, Badge } from '../components/ui/index.jsx'
 
 function diasRestantes(fechaLimite) {
   if (!fechaLimite) return null

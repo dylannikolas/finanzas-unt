@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useStore } from '../store/useStore'
-import { Empty, Spinner } from '../components/ui/index.js'
+import { Empty, Spinner } from '../components/ui/index.jsx'
 import { exportarCSV, exportarExcel } from '../lib/exportar.js'
 
 const FILTROS = [
