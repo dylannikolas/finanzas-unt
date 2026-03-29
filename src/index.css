@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    overscroll-behavior: none;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scrollbar oculto en mobile */
+  ::-webkit-scrollbar { display: none; }
+  * { scrollbar-width: none; }
+}
+
+@layer components {
+  .screen {
+    @apply flex flex-col h-full overflow-y-auto;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-gray-100 p-4 mb-3;
+  }
+
+  .chip {
+    @apply px-3 py-1.5 rounded-full border border-gray-200 text-xs text-gray-500 bg-gray-50 cursor-pointer transition-all;
+  }
+  .chip-on {
+    @apply bg-brand-50 text-brand-600 border-brand-100;
+  }
+
+  .btn-primary {
+    @apply w-full py-3 rounded-xl bg-brand-500 text-white font-medium text-sm transition-opacity active:opacity-80;
+  }
+  .btn-secondary {
+    @apply w-full py-3 rounded-xl border border-gray-200 text-gray-500 text-sm transition-colors active:bg-gray-50;
+  }
+
+  .input {
+    @apply w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm bg-white focus:outline-none focus:border-brand-500 transition-colors;
+  }
+
+  .label {
+    @apply block text-xs text-gray-500 mb-1.5;
+  }
+
+  .badge-green  { @apply text-xs px-2 py-0.5 rounded-full bg-green-50  text-green-700; }
+  .badge-red    { @apply text-xs px-2 py-0.5 rounded-full bg-red-50    text-red-700; }
+  .badge-yellow { @apply text-xs px-2 py-0.5 rounded-full bg-yellow-50 text-yellow-700; }
+  .badge-blue   { @apply text-xs px-2 py-0.5 rounded-full bg-blue-50   text-blue-700; }
+  .badge-gray   { @apply text-xs px-2 py-0.5 rounded-full bg-gray-100  text-gray-500; }
+}
